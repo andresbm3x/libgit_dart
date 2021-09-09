@@ -43,7 +43,7 @@ class Libgit {
     } else if (Platform.isWindows) {
       libGit = DynamicLibrary.open('C:/Projects/libgit/build/git2.dll');
     } else {
-      throw UnimplementedError("Platform not handled");
+      throw UnimplementedError('Platform not handled');
     }
     return libGit;
   }

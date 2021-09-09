@@ -10,5 +10,5 @@ export 'src/common/status/status.dart';
 export 'src/common/commit/commit.dart';
 export 'src/common/commit/commit_collection.dart';
 export 'src/common/tag/tag_collection.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/common/reference/references.dart';
+export 'src/commands/repository_status.dart';

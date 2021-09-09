@@ -7,12 +7,17 @@ void main() {
   print('======Repository Working path======');
   print(repo.workDir());
 
-  // print('======Tag list======');
-  // var tags = TagCollection(repo);
-  // tags.forEach(print);
+  print('======Tag list======');
+  var tags = TagCollection(repo);
+  tags.forEach(print);
   print('======Commit list======');
   var commits = CommitCollection(repo);
   commits.forEach(print);
+  print('======references list======');
+  var refs = References.getBranches(repo);
+  refs.forEach(print);
+  var refs2 = References.getAllReferences(repo);
+  refs2.forEach(print);
 
   print('======Release the repository======');
   repo.free();

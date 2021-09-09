@@ -1,0 +1,11 @@
+name: LibgitBindings
+description: libgit bindings.
+
+output: 'lib/src/libgit_bindings/libgit_bindings.dart'
+headers: 
+  entry-points: 
+    - 'third_party/libgit/git2.h'
+
+comments:
+  style: any
+  length: full

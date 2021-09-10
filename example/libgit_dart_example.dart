@@ -13,11 +13,19 @@ void main() {
   print('======Commit list======');
   var commits = CommitCollection(repo);
   commits.forEach(print);
-  print('======references list======');
+  print('======Branches list======');
   var refs = References.getBranches(repo);
   refs.forEach(print);
+  print('======references list======');
   var refs2 = References.getAllReferences(repo);
   refs2.forEach(print);
+  print('======STATUS======');
+  var status = RepositoryStatus.getStatus(repo);
+  print('======STATUS - Staged======');
+  status.staged.forEach(print);
+  print('======STATUS - unestaged======');
+  status.unstaged.forEach(print);
+
 
   print('======Release the repository======');
   repo.free();
